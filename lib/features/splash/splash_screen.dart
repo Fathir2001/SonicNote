@@ -78,13 +78,12 @@ class _SplashScreenState extends State<SplashScreen> {
             Column(
               mainAxisSize: MainAxisSize.min,
               children: [
-                // Circular icon container
+                // Logo
                 Container(
-                  width: 100,
-                  height: 100,
+                  width: 120,
+                  height: 120,
                   decoration: BoxDecoration(
                     shape: BoxShape.circle,
-                    gradient: AppColors.brandGradient,
                     boxShadow: [
                       BoxShadow(
                         color: AppColors.accentIndigo.withValues(alpha: 0.5),
@@ -93,10 +92,11 @@ class _SplashScreenState extends State<SplashScreen> {
                       ),
                     ],
                   ),
-                  child: const Icon(
-                    Icons.music_note_rounded,
-                    size: 48,
-                    color: AppColors.pureWhite,
+                  child: ClipOval(
+                    child: Image.asset(
+                      'assets/images/logo.png',
+                      fit: BoxFit.cover,
+                    ),
                   ),
                 ).animate().fadeIn(duration: 600.ms).scaleXY(
                     begin: 0.5,
