@@ -1,6 +1,6 @@
 name: sonic_note
 description: "SonicNote — Voice-powered notes app. Type or speak your thoughts, stored offline."
-publish_to: 'none'
+publish_to: "none"
 version: 1.0.0+1
 
 environment:
