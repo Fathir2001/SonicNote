@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+
 import '../constants/app_colors.dart';
 
 /// A gradient-filled button matching SonicNote branding.

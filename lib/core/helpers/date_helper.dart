@@ -16,5 +16,6 @@ class DateHelper {
     return DateFormat('MMM d, yyyy').format(dt);
   }
 
-  static String formatFull(DateTime dt) => DateFormat('MMM d, yyyy – h:mm a').format(dt);
+  static String formatFull(DateTime dt) =>
+      DateFormat('MMM d, yyyy – h:mm a').format(dt);
 }
