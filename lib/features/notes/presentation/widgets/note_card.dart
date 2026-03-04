@@ -1,4 +1,5 @@
 import 'dart:ui';
+
 import 'package:flutter/material.dart';
 import 'package:flutter_animate/flutter_animate.dart';
 
@@ -83,7 +84,8 @@ class NoteCard extends StatelessWidget {
                         ),
                         // Popup menu
                         PopupMenuButton<String>(
-                          icon: Icon(Icons.more_vert, color: subColor, size: 20),
+                          icon:
+                              Icon(Icons.more_vert, color: subColor, size: 20),
                           onSelected: (v) {
                             if (v == 'pin') onTogglePin();
                             if (v == 'delete') onDelete();

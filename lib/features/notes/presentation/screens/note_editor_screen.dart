@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:flutter_animate/flutter_animate.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:permission_handler/permission_handler.dart';
 import 'package:speech_to_text/speech_to_text.dart' as stt;
-import 'package:flutter_animate/flutter_animate.dart';
 
 import '../../../../core/constants/app_colors.dart';
 import '../../../../core/constants/app_strings.dart';
@@ -68,8 +68,7 @@ class _NoteEditorScreenState extends ConsumerState<NoteEditorScreen> {
       if (!result.isGranted) {
         if (mounted) {
           ScaffoldMessenger.of(context).showSnackBar(
-            const SnackBar(
-                content: Text('Microphone permission is required.')),
+            const SnackBar(content: Text('Microphone permission is required.')),
           );
         }
         return;
@@ -297,7 +296,9 @@ class _NoteEditorScreenState extends ConsumerState<NoteEditorScreen> {
         decoration: BoxDecoration(
           shape: BoxShape.circle,
           gradient: _isListening ? AppColors.brandGradient : null,
-          color: _isListening ? null : AppColors.accentIndigo.withValues(alpha: 0.15),
+          color: _isListening
+              ? null
+              : AppColors.accentIndigo.withValues(alpha: 0.15),
           boxShadow: _isListening
               ? [
                   BoxShadow(

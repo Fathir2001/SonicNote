@@ -1,5 +1,7 @@
 import 'dart:math';
+
 import 'package:flutter/material.dart';
+
 import '../../../../core/constants/app_colors.dart';
 
 /// Animated fake waveform bars shown during voice recording.

@@ -1,4 +1,5 @@
 import 'dart:ui';
+
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
@@ -75,16 +76,19 @@ class SettingsScreen extends ConsumerWidget {
                   title: Text(AppStrings.appName,
                       style: TextStyle(
                           fontWeight: FontWeight.w600, color: textColor)),
-                  subtitle: Text('${AppStrings.version} ${AppStrings.appVersion}',
-                      style: TextStyle(color: textColor.withValues(alpha: 0.5))),
+                  subtitle: Text(
+                      '${AppStrings.version} ${AppStrings.appVersion}',
+                      style:
+                          TextStyle(color: textColor.withValues(alpha: 0.5))),
                 ),
                 const Divider(height: 1),
                 ListTile(
-                  leading: Icon(Icons.privacy_tip_outlined, color: textColor.withValues(alpha: 0.6)),
+                  leading: Icon(Icons.privacy_tip_outlined,
+                      color: textColor.withValues(alpha: 0.6)),
                   title: Text(AppStrings.privacyPolicy,
                       style: TextStyle(color: textColor)),
-                  trailing:
-                      Icon(Icons.chevron_right, color: textColor.withValues(alpha: 0.3)),
+                  trailing: Icon(Icons.chevron_right,
+                      color: textColor.withValues(alpha: 0.3)),
                   onTap: () => _showPrivacyPolicy(context, isDark),
                 ),
               ],
@@ -269,9 +273,11 @@ class _ThemeOption extends StatelessWidget {
 
     return ListTile(
       leading: Icon(icon,
-          color: selected ? AppColors.accentIndigo : textColor.withValues(alpha: 0.4)),
-      title:
-          Text(label, style: TextStyle(color: textColor, fontWeight: FontWeight.w500)),
+          color: selected
+              ? AppColors.accentIndigo
+              : textColor.withValues(alpha: 0.4)),
+      title: Text(label,
+          style: TextStyle(color: textColor, fontWeight: FontWeight.w500)),
       trailing: selected
           ? const Icon(Icons.check_circle_rounded,
               color: AppColors.accentIndigo)

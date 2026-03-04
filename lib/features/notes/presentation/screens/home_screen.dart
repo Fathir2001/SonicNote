@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_animate/flutter_animate.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart';
 
 import '../../../../core/constants/app_colors.dart';
 import '../../../../core/constants/app_strings.dart';
@@ -81,11 +81,8 @@ class _HomeScreenState extends ConsumerState<HomeScreen> {
             snap: true,
             expandedHeight: 70,
             flexibleSpace: FlexibleSpaceBar(
-              titlePadding:
-                  const EdgeInsets.only(left: 20, bottom: 14),
-              title: _isSearchOpen
-                  ? _buildSearchField()
-                  : _buildTitle(isDark),
+              titlePadding: const EdgeInsets.only(left: 20, bottom: 14),
+              title: _isSearchOpen ? _buildSearchField() : _buildTitle(isDark),
             ),
             actions: [
               IconButton(
@@ -215,8 +212,7 @@ class _HomeScreenState extends ConsumerState<HomeScreen> {
             borderSide: BorderSide.none,
           ),
         ),
-        onChanged: (v) =>
-            ref.read(searchQueryProvider.notifier).state = v,
+        onChanged: (v) => ref.read(searchQueryProvider.notifier).state = v,
       ),
     );
   }
@@ -224,15 +220,12 @@ class _HomeScreenState extends ConsumerState<HomeScreen> {
   Widget _buildSortMenu() {
     return PopupMenuButton<NoteSortMode>(
       icon: const Icon(Icons.sort_rounded),
-      onSelected: (mode) =>
-          ref.read(sortModeProvider.notifier).state = mode,
+      onSelected: (mode) => ref.read(sortModeProvider.notifier).state = mode,
       itemBuilder: (_) => const [
         PopupMenuItem(
-            value: NoteSortMode.newest,
-            child: Text(AppStrings.sortNewest)),
+            value: NoteSortMode.newest, child: Text(AppStrings.sortNewest)),
         PopupMenuItem(
-            value: NoteSortMode.oldest,
-            child: Text(AppStrings.sortOldest)),
+            value: NoteSortMode.oldest, child: Text(AppStrings.sortOldest)),
         PopupMenuItem(
             value: NoteSortMode.lastEdited,
             child: Text(AppStrings.sortLastEdited)),
@@ -259,9 +252,7 @@ class _HomeScreenState extends ConsumerState<HomeScreen> {
         onPressed: () => _openEditor(),
         child: const Icon(Icons.add_rounded, size: 28),
       ),
-    )
-        .animate()
-        .scale(
+    ).animate().scale(
           begin: const Offset(0.8, 0.8),
           end: const Offset(1, 1),
           duration: 400.ms,

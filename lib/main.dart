@@ -51,4 +51,3 @@ class SonicNoteApp extends ConsumerWidget {
     );
   }
 }
-

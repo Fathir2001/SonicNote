@@ -71,10 +71,8 @@ class _SplashScreenState extends State<SplashScreen> {
                   ),
                 ),
               ),
-            )
-                .animate()
-                .fadeIn(duration: 800.ms)
-                .scaleXY(begin: 0.7, end: 1.1, duration: 1800.ms, curve: Curves.easeOut),
+            ).animate().fadeIn(duration: 800.ms).scaleXY(
+                begin: 0.7, end: 1.1, duration: 1800.ms, curve: Curves.easeOut),
 
             // ── Logo icon + text ──
             Column(
@@ -100,10 +98,11 @@ class _SplashScreenState extends State<SplashScreen> {
                     size: 48,
                     color: AppColors.pureWhite,
                   ),
-                )
-                    .animate()
-                    .fadeIn(duration: 600.ms)
-                    .scaleXY(begin: 0.5, end: 1, duration: 700.ms, curve: Curves.elasticOut),
+                ).animate().fadeIn(duration: 600.ms).scaleXY(
+                    begin: 0.5,
+                    end: 1,
+                    duration: 700.ms,
+                    curve: Curves.elasticOut),
 
                 const SizedBox(height: 28),
 
@@ -120,10 +119,8 @@ class _SplashScreenState extends State<SplashScreen> {
                       letterSpacing: 1.2,
                     ),
                   ),
-                )
-                    .animate()
-                    .fadeIn(duration: 500.ms, delay: 300.ms)
-                    .slideY(begin: 0.2, end: 0, duration: 500.ms, delay: 300.ms),
+                ).animate().fadeIn(duration: 500.ms, delay: 300.ms).slideY(
+                    begin: 0.2, end: 0, duration: 500.ms, delay: 300.ms),
 
                 const SizedBox(height: 10),
 
@@ -135,9 +132,7 @@ class _SplashScreenState extends State<SplashScreen> {
                     color: AppColors.nearWhite.withValues(alpha: 0.5),
                     letterSpacing: 1.5,
                   ),
-                )
-                    .animate()
-                    .fadeIn(duration: 500.ms, delay: 600.ms),
+                ).animate().fadeIn(duration: 500.ms, delay: 600.ms),
               ],
             ),
 
