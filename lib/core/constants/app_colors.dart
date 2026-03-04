@@ -36,10 +36,10 @@ class AppColors {
 
   // ── Glass effects ────────────────────────────────────────────────
   /// Light mode glass card: navy 6-12% opacity
-  static Color glassLight = deepNavy.withOpacity(0.08);
-  static Color glassBorderLight = pureWhite.withOpacity(0.15);
+  static Color glassLight = deepNavy.withValues(alpha: 0.08);
+  static Color glassBorderLight = pureWhite.withValues(alpha: 0.15);
 
   /// Dark mode glass card: white 8-18% opacity
-  static Color glassDark = pureWhite.withOpacity(0.10);
-  static Color glassBorderDark = pureWhite.withOpacity(0.14);
+  static Color glassDark = pureWhite.withValues(alpha: 0.10);
+  static Color glassBorderDark = pureWhite.withValues(alpha: 0.14);
 }

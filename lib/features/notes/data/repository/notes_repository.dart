@@ -1,4 +1,5 @@
 import 'package:hive_flutter/hive_flutter.dart';
+
 import '../models/note_model.dart';
 
 /// Handles all CRUD operations on the local Hive 'notes' box.
@@ -6,10 +7,9 @@ class NotesRepository {
   static const String _boxName = 'notes';
 
   /// Open and return the notes box.
-  static Future<Box<NoteModel>> _box() async =>
-      Hive.isBoxOpen(_boxName)
-          ? Hive.box<NoteModel>(_boxName)
-          : await Hive.openBox<NoteModel>(_boxName);
+  static Future<Box<NoteModel>> _box() async => Hive.isBoxOpen(_boxName)
+      ? Hive.box<NoteModel>(_boxName)
+      : await Hive.openBox<NoteModel>(_boxName);
 
   /// Get all notes sorted by newest first (default).
   Future<List<NoteModel>> getAllNotes() async {
